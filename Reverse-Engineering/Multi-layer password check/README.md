@@ -50,7 +50,7 @@ Therefore, the main goal is to determine the exact six strings expected by `FUN_
 
 Although the decompiler output contains a significant amount of C++ standard-library noise (`std::__cxx11::string`, memory allocation, constructors/destructors, etc.), the actual verification logic is relatively simple.
 
-![Ghidra Decompiler & Listing View](images/ghidra_decompilation.png)
+![Ghidra Decompiler & Listing View](ghidra_decompilation.png)
 
 ---
 
@@ -129,6 +129,8 @@ Since every valid block is exactly four characters long (`MAZZ`), the extracted 
 
 ## 3️⃣ Extracting the Values from `.data`
 
+![Array Values in Ghidra](BytesView.png)
+
 Inspecting memory at `0x00104010` using Ghidra's **Listing** and **Bytes** views reveals six 32-bit little-endian integers:
 
 | Address      | Raw Bytes     | Integer |
@@ -197,6 +199,8 @@ Good job. Hmmmm. :3
 ```
 
 This confirms that the reverse-engineered constraints are correct.
+
+![Successful Execution](Solution.png)
 
 ---
 
