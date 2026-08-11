@@ -3,13 +3,15 @@
 ## 📌 Challenge Overview
 
 This write-up provides an in-depth analysis of a **Linux ELF 64-bit C++ crackme challenge**. The main objective is to reverse-engineer the input validation logic by analyzing the binary in **Ghidra** and extracting the required parameters directly from the `.data` section.
-
-| Attribute               | Details                                                                      |
-| ----------------------- | ---------------------------------------------------------------------------- |
-| **Target Architecture** | x86_64 ELF Executable                                                        |
-| **Language**            | C++                                                                          |
-| **Analysis Focus**      | Decompiler Noise Reduction, `.data` Array Extraction, Bitwise Shift Analysis |
-| **Tool Used**           | Ghidra                                                                       |
+| Attribute | Details |
+| :--- | :--- |
+| **Challenge Name** | Mazzotti's Multi-layer password check |
+| **Author** | Mazzotti |
+| **Platform** | Crackmes.one (Unix/Linux etc.) |
+| **Difficulty Level** | 1.8 |
+| **Architecture** | x86-64 |
+| **Language** | C/C++ |
+| **Tools Used** | Ghidra |
 
 ---
 
