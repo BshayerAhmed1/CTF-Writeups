@@ -129,7 +129,7 @@ Since every valid block is exactly four characters long (`MAZZ`), the extracted 
 
 ## 3️⃣ Extracting the Values from `.data`
 
-![Array Values in Ghidra](Bytes View.png)
+![Array Values in Ghidra](Bytes-View.png)
 
 Inspecting memory at `0x00104010` using Ghidra's **Listing** and **Bytes** views reveals six 32-bit little-endian integers:
 
