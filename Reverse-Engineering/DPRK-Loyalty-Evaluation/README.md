@@ -41,7 +41,7 @@ Inspecting assembly instructions for `take_loyalty_test` revealed the `strcmp` c
 * **Key Instruction:** `0x4013ef: test %eax, %eax`
 * **Jump Condition:** `0x4013f1: je 0x401413` (Jumps to `grant_party_membership` if `$eax == 0`).
 
----
+
 
 ### **2. Register Manipulation & Bypass**
 
@@ -65,9 +65,14 @@ $9 = 0
 
 ##🔑 Flag
 FLAG{0x8A7_JUCHE_FORMAT_STRING_MASTERY}
+
+
 ---
+
+
 ##💡 Key Takeaways
 **Register Manipulation:** Demonstrates how modifying general-purpose registers ($eax) in a debugger can cleanly bypass authentication/logic checks without altering binary bytes on disk.
 
 **Calling Conventions:** Leveraging understanding of x86_64 ABI return registers to alter control flow dynamically.
 
+---
