@@ -49,9 +49,6 @@ Inspecting assembly instructions for `take_loyalty_test` revealed the `strcmp` c
    ```gdb
    (gdb) break *0x4013ef
     ```
-
----
-
   2. Executed the binary, answered Question 1 (38), and passed arbitrary input (vvv) for Question 2.
 
   3. Inspected $eax at the breakpoint, which held a non-zero error value (41), then forced it to 0:
@@ -64,12 +61,13 @@ $8 = 41
 $9 = 0
 ```
 4. Continued execution (continue), bypassing the check and retrieving the flag.
+---
 
 ##🔑 Flag
 FLAG{0x8A7_JUCHE_FORMAT_STRING_MASTERY}
-
+---
 ##💡 Key Takeaways
-Register Manipulation: Demonstrates how modifying general-purpose registers ($eax) in a debugger can cleanly bypass authentication/logic checks without altering binary bytes on disk.
+**Register Manipulation:** Demonstrates how modifying general-purpose registers ($eax) in a debugger can cleanly bypass authentication/logic checks without altering binary bytes on disk.
 
-Calling Conventions: Leveraging understanding of x86_64 ABI return registers to alter control flow dynamically.
+**Calling Conventions:** Leveraging understanding of x86_64 ABI return registers to alter control flow dynamically.
 
