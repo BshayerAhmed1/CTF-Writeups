@@ -21,7 +21,7 @@ A solution for the **DPRK Loyalty Evaluation** challenge on Crackmes.one. This w
    - Decompiled `main()` to observe basic anti-debugging mechanics (`ptrace`).
    - Inspected `take_loyalty_test()` which prompts for two specific questions and validates responses using `strcmp()`.
 
-![Ghidra Decompilation](images/ghidra_decompilation.png)
+![Ghidra Decompilation](Loyalty-test.png)
 
 2. **Extracted Key Info:**
    - Question 1 Answer: `38`
@@ -36,7 +36,7 @@ Rather than passing the expected string for Question 2, the challenge was solved
 ### **1. Disassembly Analysis**
 Inspecting assembly instructions for `take_loyalty_test` revealed the `strcmp` call followed by the conditional jump instruction `je`.
 
-![GDB Disassembly Dump](images/gdb_disassembly.png)
+![GDB Disassembly Dump](GDB1.png)
 
 * **Key Instruction:** `0x4013ef: test %eax, %eax`
 * **Jump Condition:** `0x4013f1: je 0x401413` (Jumps to `grant_party_membership` if `$eax == 0`).
@@ -46,9 +46,9 @@ Inspecting assembly instructions for `take_loyalty_test` revealed the `strcmp` c
 ### **2. Register Manipulation & Bypass**
 
 1. Set a breakpoint right before the test instruction:
-   ```gdb
+       ```gdb
    (gdb) break *0x4013ef
-```
+    ```
 
 ---
 
