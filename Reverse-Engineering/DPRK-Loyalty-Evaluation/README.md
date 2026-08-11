@@ -46,23 +46,15 @@ Inspecting assembly instructions for `take_loyalty_test` revealed the `strcmp` c
 ### **2. Register Manipulation & Bypass**
 
 1. Set a breakpoint right before the test instruction:
-       ```gdb
+   ```gdb
    (gdb) break *0x4013ef
     ```
 
 ---
 
-💡 Key Takeaways
-Static Analysis Power: Disassemblers like Ghidra allow complete bypass of interactive prompts by reversing memory variables without needing active execution or dynamic debugging.
+  2. Executed the binary, answered Question 1 (38), and passed arbitrary input (vvv) for Question 2.
 
-Anti-Debugging Awareness: Identified how simple ptrace checks attempt to block debuggers at the start of main().
-
-
-
-
-Executed the binary, answered Question 1 (38), and passed arbitrary input (vvv) for Question 2.
-
-Inspected $eax at the breakpoint, which held a non-zero error value (41), then forced it to 0:
+  3. Inspected $eax at the breakpoint, which held a non-zero error value (41), then forced it to 0:
 
 Code snippet
 ```gdb
@@ -71,12 +63,12 @@ $8 = 41
 (gdb) set $eax = 0    (gdb) p$eax
 $9 = 0
 ```
-Continued execution (continue), bypassing the check and retrieving the flag.
+4. Continued execution (continue), bypassing the check and retrieving the flag.
 
-🔑 Flag
+##🔑 Flag
 FLAG{0x8A7_JUCHE_FORMAT_STRING_MASTERY}
 
-💡 Key Takeaways
+##💡 Key Takeaways
 Register Manipulation: Demonstrates how modifying general-purpose registers ($eax) in a debugger can cleanly bypass authentication/logic checks without altering binary bytes on disk.
 
 Calling Conventions: Leveraging understanding of x86_64 ABI return registers to alter control flow dynamically.
