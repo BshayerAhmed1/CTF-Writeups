@@ -48,6 +48,8 @@ builtin_strncpy(correct_q2, "Mount Paektu", 0xd);
 
 Both answers are verified using strcmp(). Passing both comparisons successfully routes execution directly to grant_party_membership().
 
+![take_loyalty_test](Loyalty-test.png)
+
 2. Extracting the Flag (grant_party_membership())
 Navigating to grant_party_membership() reveals that the flag is hardcoded directly into the print output stream (std::cout):
 
@@ -59,6 +61,9 @@ void grant_party_membership(void) {
     system("/bin/sh");
 }
 ```
+
+![grant_party_membership](Flag.png)
+
 
 🔑 Solution & Flag
 Question 1 Input: 38
