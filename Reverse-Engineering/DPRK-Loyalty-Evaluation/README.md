@@ -61,18 +61,16 @@ $8 = 41
 $9 = 0
 ```
 4. Continued execution (continue), bypassing the check and retrieving the flag.
+   
 ---
 
-##🔑 Flag
+## 🔑 Flag
 FLAG{0x8A7_JUCHE_FORMAT_STRING_MASTERY}
 
-
 ---
 
-
-##💡 Key Takeaways
+## 💡 Key Takeaways
 **Register Manipulation:** Demonstrates how modifying general-purpose registers ($eax) in a debugger can cleanly bypass authentication/logic checks without altering binary bytes on disk.
 
 **Calling Conventions:** Leveraging understanding of x86_64 ABI return registers to alter control flow dynamically.
 
----
