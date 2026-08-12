@@ -1,4 +1,4 @@
-# 🚩 CTF & Reverse Engineering Writeups
+# 🚩 CTF & Writeups
 
 Welcome to my security writeups repository! Here, I document my detailed solutions, static/dynamic analysis workflows, and key insights for various Reverse Engineering challenges and CTF labs.
 
